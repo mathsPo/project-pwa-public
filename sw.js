@@ -1,8 +1,6 @@
 const STATIC_CACHE_NAME = "webApp.v1";
 const modelList_CACHE_NAME = 'modelelist';
 
-// https://0a10d708-0299-414b-ae54-aff5c9f16148-bluemix.cloudant.com/dashboard.html
-
 this.addEventListener('install', function(event) {     
     event.waitUntil(
         caches.open(STATIC_CACHE_NAME).then(function(cache) {

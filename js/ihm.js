@@ -28,7 +28,7 @@ function showErrorMessage(error){
 }
 
 /**
- * Après le chargement de la page
+ * Après le chargement de la page, declenchement et arret du spinner
  */
 window.addEventListener('load', () => {
     startSpinner();

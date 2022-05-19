@@ -1,3 +1,6 @@
+/**
+ * L'ensemble de se script sert à provoquer l'installation de la PWA si le moteur de recherche le permet
+ */
 const conteneur_boutton = document.getElementById("button_install");
 const buttonInstall = document.getElementById("button");
 
