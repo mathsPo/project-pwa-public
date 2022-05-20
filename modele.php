@@ -56,7 +56,7 @@
   $model_final = str_replace('_', ' ', $model);
 ?>
       
-    <div className="App">
+    <div class="App">
       <h2>Modele de <?php echo $model_final ?></h2>
       <model-viewer class="model" src=<?php echo "modeles/" . $_POST['url'] . "/" . $model?> shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls min-camera-orbit="auto auto 100%" max-camera-orbit="auto auto 100%" min-field-of-view="45deg" max-field-of-view="45deg" environment-image="neutral" auto-rotate autoplay></model-viewer>
     </div>
