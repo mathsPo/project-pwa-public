@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
+    <!--Titre de la page -->
     <title>PWA - Liste des modeles en RA</title>
     
     <meta charset="UTF-8">
@@ -18,6 +19,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script>
+        //Initialisation du serviceWorker (le service worker met en cache les ressources pour y acceder hors connexion)
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js').then(function(reg) {
                 console.log('Registration succeeded. Scope is ' + reg.scope);
@@ -30,6 +32,7 @@
 </head>
 <body>
 <header>
+    <!--Tittre de l'application-->
     <h1>LABO*AR
         <span class="material-icons">
             qr_code_scanner
@@ -38,6 +41,7 @@
 </header>
 
         <div class="texte-explicatif">
+            <!--Zone de texte qui decrit l'application-->
             <p>
                 Bienvenue sur la visionneuse 3D de Saint-Ex Culture Numérique . Cette Webapp permet de visualiser des modèles 3D réalisés au cours d’ateliers à Saint-Ex en réalité augmentée. Il est recommandé de l’utiliser sur un téléphone, les résultat peuvent varier d’un modèle à l’autre et selon le navigateur utilisé. Pour accéder aux modèles, choisissez une collection dans le menu. 
             </p>
@@ -45,22 +49,29 @@
         
     <div class="collection">
         <div id="collect">
+            <!--Formulaire avec la zone de texte et le bouton-->
             <form name="addCollection" method="post" action="modele.php">
+            <!-- Nom de la zone de texte-->
             <label for="url">Nom du dossier <source></label>
+            <!-- La zone de texte-->
             <input type="text" name="url" id="url" required>
+            <!--bouton-->
             <button type="submit"  id="submit">
                 Voir la collection       
             </button>
         </form>
         </div>
+        <!--Texte qui explique la demarche à adopter pour visioner les collections 3D -->
         <div id="texte">
             Voici ci dessous une liste des collections des modeles 3D que vous pouvez visionnez, tapez dans la barre de recherche:<br>
+            <!--Liste de toutes les collections, pour en ajouter une, faire de la forme <li> maCollection </li> -->
             <ul>
                 <li>sciencepo</li>
                 <li>le_musée_du_louvre</li>
             </ul>
         </div>
     </div>
+
 
 <script src="js/ihm.js" type='application/javascript'></script>
 </body>
