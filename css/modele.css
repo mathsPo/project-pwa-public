@@ -9,14 +9,14 @@ body {
 
 #logostex {
     position: absolute;
-    margin: 1rem;
+    margin: 0.5rem;
     top: 0;
     right: 0;
-    width: 100px;
-    height: 100px;;
+    max-width: 90px;
+    max-height: 90px;;
     display: flex;
     font-weight: 500;
-    border: 17px solid rgb(255, 235, 0);
+    border: 15px solid rgb(255, 235, 0);
     border-radius: 3px;
     }
 
@@ -31,9 +31,9 @@ body {
 }
 
 .model{
-    width: 83%;
+    width: 50%;
     display: inline-block;
-    height: 500px;
+    height: 250px;
     background-color: white;
     margin: 0.5rem 1rem;
     font-weight: 500;
@@ -45,13 +45,13 @@ body {
 .App{
     display: inline-block;
     text-align: center;
-    width: 30%;
+    width: 49%;
 }
 
 h1{
-    text-align: center;
     font-family: 'frank-new';
     margin: 3rem 3rem 3.5rem 3rem;
+    text-align: center;
 }
 
 h2{
@@ -62,4 +62,56 @@ h2{
     border: 15px solid rgb(255, 235, 0);
     border-radius: 3px;
     padding: 1rem;
+}
+
+@media only screen and (max-width: 375px) {
+    h1{
+        width: 50%;
+        font-size: 23px;
+    }
+    h2{
+        font-size: 15px;
+    }
+    .model{
+        width: 40%;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    h2{
+        margin: 0.5rem 0.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    #logostex{
+        width: 70px;
+        height: 70px;
+        border: 10px solid rgb(255, 235, 0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .model{
+        width: 80%;
+        height: 400px;
+    }
+    #logostex{
+        margin: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .App{
+        width: 33%;
+    }
+
 }
